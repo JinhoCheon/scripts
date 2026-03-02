@@ -41,31 +41,32 @@ def apply_store(xpath):
        
 def pay_store_fee():
     count = 0
-    pay1_xpath = '/html/body/div[1]/main/div[2]/div[2]/div/div/div/div/div/div[5]/button/span/em'
-    chk1_xpath = '/html/body/div[1]/main/div[2]/div[6]/div/div[2]/div[3]/div[1]/div/div[2]/label/span/svg'
-    chk2_xpath = '/html/body/div[1]/main/div[2]/div[6]/div/div[2]/div[3]/div[1]/div/div[3]/label/span/svg'
-    chk3_xpath = '/html/body/div[1]/main/div[2]/div[6]/div/div[2]/div[3]/div[1]/div/div[4]/label/span/svg'
-    chk4_xpath = '/html/body/div[1]/main/div[2]/div[6]/div/div[2]/div[3]/div[1]/div/div[5]/label/span/svg'
-    pay2_xpath = '/html/body/div[1]/main/div[2]/div[6]/div/div[2]/div[4]/div/button/span/em'
+    pay1_xpath = '//*[@id="__nuxt"]/main/div[2]/div[3]/div/div/div/div/div/div[5]/button'
+    chk1_xpath = '//*[@id="modal-layer"]/div/div[2]/div/div[3]/div/div[2]/div[2]/label/span/svg'
+    chk2_xpath = '//*[@id="modal-layer"]/div/div[2]/div/div[3]/div/div[2]/div[3]/label/span/svg'
+    chk3_xpath = '//*[@id="modal-layer"]/div/div[2]/div/div[3]/div/div[2]/div[4]/label/span/svg'
+    chk4_xpath = '//*[@id="modal-layer"]/div/div[2]/div/div[3]/div/div[2]/div[5]/label/span/svg'
+    pay2_xpath = '//*[@id="modal-layer"]/div/div[2]/div/div[4]/div/button'
+    
     
     while True:
-        pay1_btn = driver.find_element(By.Xpath, pay1_xpath)
+        pay1_btn = driver.find_element(By.XPATH, pay1_xpath)
         pay1_btn.click()
         time.sleep(3)
         
-        chk_box1 = driver.find_element(By.Xpath, chk1_xpath)
+        chk_box1 = driver.find_element(By.XPATH, chk1_xpath)
         chk_box1.click()
         time.sleep(1)
-        chk_box2 = driver.find_element(By.Xpath, chk2_xpath)
+        chk_box2 = driver.find_element(By.XPATH, chk2_xpath)
         chk_box2.click()
         time.sleep(1)
-        chk_box3 = driver.find_element(By.Xpath, chk3_xpath)
+        chk_box3 = driver.find_element(By.XPATH, chk3_xpath)
         chk_box3.click()
         time.sleep(1)
-        chk_box4 = driver.find_element(By.Xpath, chk4_xpath)
+        chk_box4 = driver.find_element(By.XPATH, chk4_xpath)
         chk_box4.click()
         time.sleep(1)
-        pay2_btn = driver.find_element(By.Xpath, pay2_xpath)
+        pay2_btn = driver.find_element(By.XPATH, pay2_xpath)
         pay2_btn.click()
         time.sleep(3)
 
